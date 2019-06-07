@@ -48,13 +48,13 @@ jQuery(document).ready(function ($) {
             showMessage(visitor + ' 早上好，早起的鳥兒有蟲吃噢！早起的蟲兒被鳥吃，你是鳥兒還是蟲兒？嘻嘻！', 6000);
         } else if (now > 11 && now <= 14) {
             showMessage(visitor + ' 中午了，吃飯了麽？不要餓著了，餓死了誰來挺我呀！', 6000);
-        } else if (now > 14 && now <= 18) {
+        } else if (now > 14 && now <= 20) {
             showMessage(visitor + ' 中午的時光真難熬', 6000);
         } else {
+		showMessage('歡迎' + visitor + '來到《' + title + '》', 6000);
             showMessage(visitor + ' 快來逗我玩吧！', 6000);
         }
-	duration: 1000;
-        showMessage('歡迎' + visitor + '來到《' + title + '》', 6000);
+        
     $(".spig").animate({
         top: $(".spig").offset().top + 300,
         left: document.body.offsetWidth - 185
@@ -129,13 +129,13 @@ jQuery(document).ready(function ($) {
         if (!ismove) {
             stat_click++;
             if (stat_click > 4) {
-                msgs = ["你有完沒完呀？", "你已經摸我" + stat_click + "次了", "非禮呀！救命！OH，My ladygaga"];
+                msgs = ["你有完沒完呀？", "你已經摸我" + stat_click + "次了", "非禮呀！救命！"];
                 var i = Math.floor(Math.random() * msgs.length);
-                //showMessage(msgs[i]);
+                showMessage(msgs[i]);
             } else {
                 msgs = [ "不要摸我了，小心我咬你！" ,"那裡不行>w<","再摸我就要報警了"];
                 var i = Math.floor(Math.random() * msgs.length);
-                //showMessage(msgs[i]);
+                showMessage(msgs[i]);
             }
         s = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6,0.7,0.75,-0.1, -0.2, -0.3, -0.4, -0.5, -0.6,-0.7,-0.75];
         var i1 = Math.floor(Math.random() * s.length);
@@ -173,7 +173,7 @@ jQuery(document).ready(function ($) {
         _move = true;
         _x = e.pageX - parseInt($("#spig").css("left"));
         _y = e.pageY - parseInt($("#spig").css("top"));
-	showMessage("wwww");
+	//showMessage("wwww");
      });
     $(document).mousemove(function (e) {
         if (_move) {
