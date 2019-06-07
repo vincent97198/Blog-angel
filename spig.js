@@ -134,7 +134,7 @@ jQuery(document).ready(function ($) {
             } else { 
 		showMessage("不理你啦",1000);
 		$(".mumu").fadeTo("300", 0);
-                duration:2000
+                duration:200000
 		$(".mumu").fadeTo("300", 1);    
             }
         s = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6,0.7,0.75,-0.1, -0.2, -0.3, -0.4, -0.5, -0.6,-0.7,-0.75];
