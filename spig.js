@@ -1,6 +1,6 @@
 
 //右鍵菜單
-
+/*
 jQuery(document).ready(function ($) {
     $("#spig").mousedown(function (e) {
         if(e.which==3){
@@ -11,7 +11,7 @@ jQuery(document).ready(function ($) {
 	    return false;
 	});
 });
-
+*/
 //鼠標在消息上時
 jQuery(document).ready(function ($) {
     $("#message").hover(function () {
@@ -53,6 +53,7 @@ jQuery(document).ready(function ($) {
         } else {
             showMessage(visitor + ' 快來逗我玩吧！', 6000);
         }
+	duration: 1000
         showMessage('歡迎' + visitor + '來到《' + title + '》', 6000);
     $(".spig").animate({
         top: $(".spig").offset().top + 300,
