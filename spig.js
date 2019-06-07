@@ -29,7 +29,7 @@ jQuery(document).ready(function ($) {
 
 
 //鼠標在上方時
-jQuery(document).ready(function ($) {
+jQuery(document).ready(function ($) { 
     //$(".mumu").jrumble({rangeX: 2,rangeY: 2,rangeRot: 1});
     $(".mumu").mouseover(function () {
        $(".mumu").fadeTo("300", 0.3);
