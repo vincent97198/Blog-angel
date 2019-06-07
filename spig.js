@@ -136,9 +136,8 @@ jQuery(document).ready(function ($) {
                 var i = Math.floor(Math.random() * msgs.length);
                 showMessage(msgs[i]);
             } else { 
-		showMessage("哼！不理你啦");   
+		showMessage("哼！不理你啦",0);   
 		$(".mumu").fadeTo("1000", 0);
-		jQuery("#message").hide();  
 		lost=true;
 		delay(1000)
             }
