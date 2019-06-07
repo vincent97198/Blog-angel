@@ -137,7 +137,7 @@ jQuery(document).ready(function ($) {
                 showMessage(msgs[i],1500);
 	    }
             if (stat_click<=25) {
-                msgs = ["你有完沒完呀？","噁心","討厭>.<", "你已經摸我" + stat_click + "次了", "非禮呀！救命！","不要摸我，小心我咬你！" ,"那裡不行>w<","再摸我就要報警了"];
+                msgs = ["你有完沒完呀？","噁心","討厭>.<", "你已經摸我" + stat_click + "次了","別動手動腳的，把手拿開！" ,"非禮呀！救命！","不要摸我，小心我咬你！" ,"那裡不行>w<","再摸我就要報警了"];
                 var i = Math.floor(Math.random() * msgs.length);
                 showMessage(msgs[i],1500);
             } else { 
