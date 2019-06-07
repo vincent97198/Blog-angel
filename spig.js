@@ -2,7 +2,8 @@
 //jQuery(document).ready(function ($) {
 //    $("#spig").mousedown(function (e) {
 //        if(e.which==3){
-//        showMessage("秘密通道:<br />    <img src=\"http://pic.sc.chinaz.com/Files/pic/Listfaces/3646/02.gif\"/><br/><a href=\"http://cnblogs.com/zwfymqz\" title=\"自為風月馬前卒\">自為風月馬前卒</a>  ",10000);
+//        showMessage("秘密通道:<br />    <img src=\"http://pic.sc.chinaz.com/Files/pic/Listfaces/3646/02.gif\"/>
+//<br/><a href=\"http://cnblogs.com/zwfymqz\" title=\"自為風月馬前卒\">自為風月馬前卒</a>  ",10000);
 //}
 //});
 //$("#spig").bind("contextmenu", function(e) {
@@ -33,7 +34,7 @@ jQuery(document).ready(function ($) {
     //$(".mumu").jrumble({rangeX: 2,rangeY: 2,rangeRot: 1});
     $(".mumu").mouseover(function () {
        $(".mumu").fadeTo("300", 0.3);
-       var msgs[3] = {"tst", "etest"};
+       var msgs[2] = {"tst", "etest"};
        var i = Math.floor(Math.random() * msgs.length);
         showMessage(msgs[i]);
     });
