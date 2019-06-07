@@ -37,7 +37,6 @@ jQuery(document).ready(function ($) {
 jQuery(document).ready(function ($) {
 	var url = window.location.href;
 	var title = document.title;
-    if (url.indexOf('/p/') < 0) { //如果是主頁
         var now = (new Date()).getHours();
         if (now > 0 && now <= 6) {
             showMessage(visitor + ' 你是夜貓子呀？還不睡覺，明天起的來麽你？', 6000);
@@ -46,14 +45,11 @@ jQuery(document).ready(function ($) {
         } else if (now > 11 && now <= 14) {
             showMessage(visitor + ' 中午了，吃飯了麽？不要餓著了，餓死了誰來挺我呀！', 6000);
         } else if (now > 14 && now <= 18) {
-            showMessage(visitor + ' 中午的時光真難熬！還好有你在！', 6000);
+            showMessage(visitor + ' 中午的時光真難熬', 6000);
         } else {
             showMessage(visitor + ' 快來逗我玩吧！', 6000);
         }
-    }
-    else {
         showMessage('歡迎' + visitor + '來到《' + title + '》', 6000);
-    }
     $(".spig").animate({
         top: $(".spig").offset().top + 300,
         left: document.body.offsetWidth - 185
@@ -68,38 +64,15 @@ jQuery(document).ready(function ($) {
 //  4000);
 });
 
-//鼠標在某些元素上方時
-jQuery(document).ready(function ($) {
-    $('h2 a').click(function () {//標題被點擊時
-        showMessage('萌萌地加載《<span style="color:#0099cc;">' + $(this).text() + '</span>》中，請稍候');
-    });
-    $('h2 a').mouseover(function () {
-        showMessage('要看看《<span style="color:#0099cc;">' + $(this).text() + '</span>》這篇隨筆麽？');
-    });
-    $('li a').mouseover(function () {
-        showMessage('去 <span style="color:#0099cc;">' + $(this).text() + '</span> 逛逛');
-    });
-    $('.tbCommentBody').mouseover(function () {
-        showMessage('<span style="color:#0099cc;">' + visitor + '</span> 向評論欄出發吧！');
-    });
-    $('#btn_comment_submit').mouseover(function () {
-        showMessage('確認提交了麽？');
-    });
-    $('#q').focus(function () {
-        showMessage('輸入你想搜索的關鍵詞再按Enter(回車)鍵就可以搜索啦!');
-    });
-});
-
-
 //無聊講點什麽
 jQuery(document).ready(function ($) {
 
     window.setInterval(function () {
-       // msgs = [ "陪我聊天吧！", "好無聊哦，你都不陪我玩！", "…@……!………", "^%#&*!@*(&#)(!)(", "我可愛吧！嘻嘻!~^_^!~~","誰淫蕩呀?~誰淫蕩?，你淫蕩呀!~~你淫蕩！~~","從前有座山，山上有座廟，廟裏有個老和尚給小和尚講故事，講：“從前有座……”"];
+       msgs = [ "陪我聊天吧！", "好無聊哦，你都不陪我玩！", "…@……!………", "^%#&*!@*(&#)(!)(", "我可愛吧！嘻嘻!~^_^!~~","從前有座山，山上有座廟，廟裏有個老和尚給小和尚講故事，講：“從前有座……”"];
        // msgs = ["<iframe src=\"http://api.lwl12.com/hitokoto\"frameborder=\"0\" scrolling=\"no\" id=\"test\" onload=\"this.height=50\"  width=\"130px\" allowtransparency=\"true\" ></iframe>"];
         //if(weather.state)msgs.push(weather.c[0],weather.c[2]);
         //msgs = [weather.c[0],weather.c[2],"<iframe src=\"http://api.myhloli.com/hitokoto/\" frameborder=\"0\" scrolling=\"no\" id=\"external-frame\"  height=\"70px\" width=\"150px\" allowtransparency=\"true\" ></iframe>","<iframe src=\"http://api.myhloli.com/hitokoto/\" frameborder=\"0\" scrolling=\"no\" id=\"external-frame\"  height=\"70px\" width=\"150px\" allowtransparency=\"true\" ></iframe>","<iframe src=\"http://api.myhloli.com/hitokoto/\" frameborder=\"0\" scrolling=\"no\" id=\"external-frame\"  height=\"70px\" width=\"150px\" allowtransparency=\"true\" ></iframe>"];
-        msgs = [$("#hitokoto").text()];
+        //msgs = [$("#hitokoto").text()];
         var i = Math.floor(Math.random() * msgs.length);
         showMessage(msgs[i], 8000);
     }, 15000);
@@ -128,53 +101,6 @@ jQuery(document).ready(function ($) {
 });
 */
 //評論資料
-jQuery(document).ready(function ($) {
-    $("#author").click(function () {
-        showMessage("留下你的尊姓大名！");
-        $(".spig").animate({
-            top: $("#author").offset().top - 70,
-            left: $("#author").offset().left - 170
-        },
-        {
-            queue: false,
-            duration: 1000
-        });
-    });
-    $("#email").click(function () {
-        showMessage("留下你的郵箱，不然就是無頭像人士了！");
-        $(".spig").animate({
-            top: $("#email").offset().top - 70,
-            left: $("#email").offset().left - 170
-        },
-        {
-            queue: false,
-            duration: 1000
-        });
-    });
-    $("#url").click(function () {
-
-        showMessage("快快告訴我你的家在哪裏，好讓我去參觀參觀！");
-        $(".spig").animate({
-            top: $("#url").offset().top - 70,
-            left: $("#url").offset().left - 170
-        },
-        {
-            queue: false,
-            duration: 1000
-        });
-    });
-    $("#comment").click(function () {
-        showMessage("認真填寫哦！不然會被認作垃圾評論的！我的乖乖~");
-        $(".spig").animate({
-            top: $("#comment").offset().top - 70,
-            left: $("#comment").offset().left - 170
-        },
-        {
-            queue: false,
-            duration: 1000
-        });
-    });
-});
 
 var spig_top = 50;
 //滾動條移動
@@ -202,7 +128,7 @@ jQuery(document).ready(function ($) {
                 var i = Math.floor(Math.random() * msgs.length);
                 //showMessage(msgs[i]);
             } else {
-                msgs = ["筋鬥雲！~我飛！", "我跑呀跑呀跑！~~", "別摸我，大男人，有什麽好摸的！", "惹不起你，我還躲不起你麽？", "不要摸我了，我會告訴老婆來打你的！", "幹嘛動我呀！小心我咬你！"];
+                msgs = [ "不要摸我了，小心我咬你！" ,"那裡不行>w<","再摸我就要報警了"];
                 var i = Math.floor(Math.random() * msgs.length);
                 //showMessage(msgs[i]);
             }
@@ -250,7 +176,7 @@ jQuery(document).ready(function ($) {
             var wx = $(window).width() - $('#spig').width();
             var dy = $(document).height() - $('#spig').height();
             if(x >= 0 && x <= wx && y > 0 && y <= dy) {
-                $("#spig").css({
+                $(".spig").css({
                     top: y,
                     left: x
                 }); //控件新位置
