@@ -174,12 +174,13 @@ jQuery(document).ready(function ($) {
         _y = e.pageY - parseInt($("#spig").css("top"));
 	//showMessage("wwww");
      });
-    $(".spig").mousemove(function (e) {
+    $(document).mousemove(function (e) {
         if (_move) {
+	showMessage("GO");
             var x = e.pageX - _x; 
             var y = e.pageY - _y;
-            var wx = $(window).width() - $('#spig').width();
-            var dy = $(document).height() - $('#spig').height();
+            var wx = $(window).width() - $('.spig').width();
+            var dy = $(document).height() - $('.spig').height();
             if(x >= 0 && x <= wx && y > 0 && y <= dy) {
                 $(".spig").animate({
                     top: y,
