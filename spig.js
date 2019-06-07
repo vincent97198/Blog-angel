@@ -35,7 +35,6 @@ jQuery(document).ready(function ($) {
 
 //開始
 jQuery(document).ready(function ($) {
-    if (isindex) { //如果是主頁
         var now = (new Date()).getHours();
         if (now > 0 && now <= 6) {
             showMessage(visitor + ' 你是夜貓子呀？還不睡覺，明天起的來麽你？', 6000);
@@ -48,10 +47,6 @@ jQuery(document).ready(function ($) {
         } else {
             showMessage(visitor + ' 快來逗我玩吧！', 6000);
         }
-    }
-    else {
-        showMessage('歡迎' + visitor + '來到《' + title + '》', 6000);
-    }
     $(".spig").animate({
         top: $(".spig").offset().top + 300,
         left: document.body.offsetWidth - 185
