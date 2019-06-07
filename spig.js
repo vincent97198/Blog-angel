@@ -134,13 +134,14 @@ jQuery(document).ready(function ($) {
                 showMessage(msgs[i]);
             } else if(stat_click>=20){
 		 //while(1){
-		  var x=Math.floor(Math.random() *3);
-		  var y = Math.floor(Math.random() *3);
-		  $(".spig").css({
-             	    top: y,
-		    left: x
-                  });
-		//}    
+		  //var x=Math.floor(Math.random() *3);
+		  //var y = Math.floor(Math.random() *3);
+		  //$(".spig").css({
+             	    //top: y,
+		    //left: x
+                  //});
+		//}  
+		    showMessage("test");
 	    }	    
 	}
         s = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6,0.7,0.75,-0.1, -0.2, -0.3, -0.4, -0.5, -0.6,-0.7,-0.75];
