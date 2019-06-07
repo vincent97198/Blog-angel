@@ -134,7 +134,7 @@ jQuery(document).ready(function ($) {
             if (stat_click<=2) {
                 msgs = ["你有完沒完呀？", "你已經摸我" + stat_click + "次了", "非禮呀！救命！","不要摸我了，小心我咬你！" ,"那裡不行>w<","再摸我就要報警了"];
                 var i = Math.floor(Math.random() * msgs.length);
-                showMessage(msgs[i]);
+                showMessage(msgs[i],1000);
             } else { 
 		showMessage("哼！不理你啦",3000);   
 		$(".mumu").fadeOut(3000);
@@ -150,7 +150,7 @@ jQuery(document).ready(function ($) {
             },
             {
                 duration: 500,
-                complete: showMessage(msgs[i])
+                complete: showMessage(msgs[i],1000)
             });
         } else {
             ismove = false;
@@ -160,7 +160,6 @@ jQuery(document).ready(function ($) {
 
 //顯示消息函數 
 function showMessage(a, b) {
-    if (b == null) b = 10000;
     jQuery("#message").hide().stop();
     jQuery("#message").html(a);
     jQuery("#message").fadeIn();
