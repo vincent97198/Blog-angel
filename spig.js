@@ -26,8 +26,8 @@ jQuery(document).ready(function ($) {
     $(".mumu").mouseover(function () {
        //$(".mumu").fadeTo("300", 0.3);
        //msgs = ["我隱身了，你看不到我", "我會隱身哦！嘿嘿！", "別動手動腳的，把手拿開！", "把手拿開我才出來！"];
-       var i = Math.floor(Math.random() * msgs.length);
-        showMessage(msgs[i]);
+       //var i = Math.floor(Math.random() * msgs.length);
+        //showMessage(msgs[i]);
     });
 	/*
     $(".mumu").mouseout(function () {
