@@ -25,7 +25,7 @@ jQuery(document).ready(function ($) {
     $(".mumu").mouseover(function () {
        $(".mumu").fadeTo("300", 0.3);
        msgs = "把手拿開我才出來！";
-        showMessage(msgs);
+        $("#message").showMessage(msgs);
     });
     $(".mumu").mouseout(function () {
         $(".mumu").fadeTo("300", 1)
@@ -35,18 +35,7 @@ jQuery(document).ready(function ($) {
 
 //開始
 jQuery(document).ready(function ($) {
-        var now = (new Date()).getHours();
-        if (now > 0 && now <= 6) {
-            showMessage(visitor + ' 你是夜貓子呀？還不睡覺，明天起的來麽你？', 6000);
-        } else if (now > 6 && now <= 11) {
-            showMessage(visitor + ' 早上好，早起的鳥兒有蟲吃噢！早起的蟲兒被鳥吃，你是鳥兒還是蟲兒？嘻嘻！', 6000);
-        } else if (now > 11 && now <= 14) {
-            showMessage(visitor + ' 中午了，吃飯了麽？不要餓著了，餓死了誰來挺我呀！', 6000);
-        } else if (now > 14 && now <= 18) {
-            showMessage(visitor + ' 中午的時光真難熬！還好有你在！', 6000);
-        } else {
-            showMessage(visitor + ' 快來逗我玩吧！', 6000);
-        }
+       
     $(".spig").animate({
         top: $(".spig").offset().top + 300,
         left: document.body.offsetWidth - 185
