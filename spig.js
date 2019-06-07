@@ -139,7 +139,7 @@ jQuery(document).ready(function ($) {
 		showMessage("哼！不理你啦","10000");
 		$(".mumu").fadeTo("300", 0);
 		lost=true;
-		delay(3)
+		delay(1000)
             }
         s = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6,0.7,0.75,-0.1, -0.2, -0.3, -0.4, -0.5, -0.6,-0.7,-0.75];
         var i1 = Math.floor(Math.random() * s.length);
