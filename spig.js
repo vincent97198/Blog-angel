@@ -53,7 +53,7 @@ jQuery(document).ready(function ($) {
         } else {
             showMessage(visitor + ' 快來逗我玩吧！', 6000);
         }
-	duration: 1000
+	duration: 1000;
         showMessage('歡迎' + visitor + '來到《' + title + '》', 6000);
     $(".spig").animate({
         top: $(".spig").offset().top + 300,
@@ -169,7 +169,7 @@ var _move = false;
 var ismove = false; //移動標記
 var _x, _y; //鼠標離控件左上角的相對位置
 jQuery(document).ready(function ($) {
-    $("#spig").mousedown(function (e) {
+    $(".spig").mousedown(function (e) {
         _move = true;
         _x = e.pageX - parseInt($("#spig").css("left"));
         _y = e.pageY - parseInt($("#spig").css("top"));
