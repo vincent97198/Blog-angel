@@ -133,14 +133,14 @@ jQuery(document).ready(function ($) {
                 var i = Math.floor(Math.random() * msgs.length);
                 showMessage(msgs[i]);
             } else if(stat_click>=20){
-		 while(1){
+		 //while(1){
 		  var x=Math.floor(Math.random() * s.length);
 		  var y = Math.floor(Math.random() * s.length);
 		  $(".spig").css({
              	    top: y,
 		    left: x
                   });
-		}    
+		//}    
 	    }	    
 	}
         
