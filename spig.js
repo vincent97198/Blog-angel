@@ -170,18 +170,19 @@ var _x, _y; //鼠標離控件左上角的相對位置
 jQuery(document).ready(function ($) {
     $(".spig").mousedown(function (e) {
         _move = true;
-        _x = e.pageX - parseInt($("#spig").css("left"));
-        _y = e.pageY - parseInt($("#spig").css("top"));
+        _x = e.pageX - parseInt($(".spig").css("left"));
+        _y = e.pageY - parseInt($(".spig").css("top"));
 	//showMessage("wwww");
      });
     $(document).mousemove(function (e) {
         if (_move) {
-	showMessage($('.spig').width());
+	//showMessage("test");
             var x = e.pageX - _x; 
             var y = e.pageY - _y;
             var wx = $(window).width() - $('.spig').width();
             var dy = $(document).height() - $('.spig').height();
             if(x >= 0 && x <= wx && y > 0 && y <= dy) {
+		    showMessage("CHECK");
                 $(".spig").animate({
                     top: y,
                     left: x
