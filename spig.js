@@ -132,7 +132,7 @@ jQuery(document).ready(function ($) {
         if (!ismove) {
             stat_click++;
 	    if(stat_click==1){
-		 msgs""非禮呀！救命！","討厭>.<","不要摸我，小心我咬你！"]
+		 msg["非禮呀！救命！","討厭>.<","不要摸我，小心我咬你！"]
 		 var i = Math.floor(Math.random() * msgs.length);
                 showMessage(msgs[i],1500);
 	    }
