@@ -1,3 +1,4 @@
+jQuery.noConflict();
 //右鍵菜單
 //jQuery(document).ready(function ($) {
 //    $("#spig").mousedown(function (e) {
