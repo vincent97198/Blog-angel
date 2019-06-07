@@ -25,7 +25,7 @@ jQuery(document).ready(function ($) {
     $(".mumu").mouseover(function () {
        $(".mumu").fadeTo("300", 0.3);
        msgs = ["you can see me", "我會隱身哦！嘿嘿！", "別動手動腳的，把手拿開！", "把手拿開我才出來！"];
-        showMessage(msgs[0]);
+        alert(msgs[0]);
     });
     $(".mumu").mouseout(function () {
         $(".mumu").fadeTo("300", 1)
