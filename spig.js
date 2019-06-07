@@ -132,8 +132,8 @@ jQuery(document).ready(function ($) {
                 var i = Math.floor(Math.random() * msgs.length);
                 showMessage(msgs[i]);
             } else { 
-		var tmpx= Math.random()%30;
-		var tmpy= Math.random()%30;
+		var tmpx= Math.random();
+		var tmpy= Math.random();
 		$(".spig").animate({
         	    top: tmpx,
        		    left: tmpy
