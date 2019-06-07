@@ -136,10 +136,11 @@ jQuery(document).ready(function ($) {
                 var i = Math.floor(Math.random() * msgs.length);
                 showMessage(msgs[i]);
             } else { 
-		showMessage("哼！不理你啦",0);   
-		$(".mumu").fadeTo("1000", 0);
+		showMessage("哼！不理你啦",1);   
+		jQuery("#message").fadeOut(0);
+		$(".mumu").fadeOut(0);
 		lost=true;
-		delay(1000)
+		delay(50000)
             }
         s = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6,0.7,0.75,-0.1, -0.2, -0.3, -0.4, -0.5, -0.6,-0.7,-0.75];
         var i1 = Math.floor(Math.random() * s.length);
