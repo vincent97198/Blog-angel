@@ -74,7 +74,7 @@ jQuery(document).ready(function ($) {
 jQuery(document).ready(function ($) {
 
     window.setInterval(function () {
-	if(!lost){
+	if(lost==false){
 	    msgs = [ "陪我聊天吧！", "好無聊哦，你都不陪我玩！", "…@……!………", "^%#&*!@*(&#)(!)(", "我可愛吧！嘻嘻!~^_^!~~","從前有座山，山上有座廟，廟裏有個老和尚給小和尚講故事，講：“從前有座……”"];
        // msgs = ["<iframe src=\"http://api.lwl12.com/hitokoto\"frameborder=\"0\" scrolling=\"no\" id=\"test\" onload=\"this.height=50\"  width=\"130px\" allowtransparency=\"true\" ></iframe>"];
         //if(weather.state)msgs.push(weather.c[0],weather.c[2]);
@@ -131,7 +131,7 @@ jQuery(document).ready(function ($) {
     $(".mumu").click(function () {
         if (!ismove) {
             stat_click++;
-            if (Math.random()>=30) {
+            if (Math.random()<=25) {
                 msgs = ["你有完沒完呀？", "你已經摸我" + stat_click + "次了", "非禮呀！救命！","不要摸我了，小心我咬你！" ,"那裡不行>w<","再摸我就要報警了"];
                 var i = Math.floor(Math.random() * msgs.length);
                 showMessage(msgs[i]);
