@@ -202,11 +202,11 @@ jQuery(document).ready(function ($) {
             if (stat_click > 4) {
                 msgs = ["你有完沒完呀？", "你已經摸我" + stat_click + "次了", "非禮呀！救命！OH，My ladygaga"];
                 var i = Math.floor(Math.random() * msgs.length);
-                //showMessage(msgs[i]);
+                showMessage(msgs[i]);
             } else {
                 msgs = ["筋鬥雲！~我飛！", "我跑呀跑呀跑！~~", "別摸我，大男人，有什麽好摸的！", "惹不起你，我還躲不起你麽？", "不要摸我了，我會告訴老婆來打你的！", "幹嘛動我呀！小心我咬你！"];
                 var i = Math.floor(Math.random() * msgs.length);
-                //showMessage(msgs[i]);
+                showMessage(msgs[i]);
             }
         s = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6,0.7,0.75,-0.1, -0.2, -0.3, -0.4, -0.5, -0.6,-0.7,-0.75];
         var i1 = Math.floor(Math.random() * s.length);
