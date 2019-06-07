@@ -1,4 +1,3 @@
-
 //右鍵菜單
 //jQuery(document).ready(function ($) {
 //    $("#spig").mousedown(function (e) {
@@ -10,6 +9,16 @@
 //    return false;
 //});
 //});
+
+//顯示消息函數 
+function showMessage(a, b) {
+    if (b == null) b = 10000;
+    jQuery("#message").hide().stop();
+    jQuery("#message").html(a);
+    jQuery("#message").fadeIn();
+    jQuery("#message").fadeTo("1", 1);
+    jQuery("#message").fadeOut(b);
+};
 
 //鼠標在消息上時
 jQuery(document).ready(function ($) {
@@ -24,8 +33,9 @@ jQuery(document).ready(function ($) {
     //$(".mumu").jrumble({rangeX: 2,rangeY: 2,rangeRot: 1});
     $(".mumu").mouseover(function () {
        $(".mumu").fadeTo("300", 0.3);
-       msgs = "把手拿開我才出來！";
-        $("#message").text(msgs);
+       msgs = ["我隱身了，你看不到我", "我會隱身哦！嘿嘿！", "別動手動腳的，把手拿開！", "把手拿開我才出來！"];
+       var i = Math.floor(Math.random() * msgs.length);
+        showMessage(msgs[i]);
     });
     $(".mumu").mouseout(function () {
         $(".mumu").fadeTo("300", 1)
@@ -35,7 +45,23 @@ jQuery(document).ready(function ($) {
 
 //開始
 jQuery(document).ready(function ($) {
-       
+    if (isindex) { //如果是主頁
+        var now = (new Date()).getHours();
+        if (now > 0 && now <= 6) {
+            showMessage(visitor + ' 你是夜貓子呀？還不睡覺，明天起的來麽你？', 6000);
+        } else if (now > 6 && now <= 11) {
+            showMessage(visitor + ' 早上好，早起的鳥兒有蟲吃噢！早起的蟲兒被鳥吃，你是鳥兒還是蟲兒？嘻嘻！', 6000);
+        } else if (now > 11 && now <= 14) {
+            showMessage(visitor + ' 中午了，吃飯了麽？不要餓著了，餓死了誰來挺我呀！', 6000);
+        } else if (now > 14 && now <= 18) {
+            showMessage(visitor + ' 中午的時光真難熬！還好有你在！', 6000);
+        } else {
+            showMessage(visitor + ' 快來逗我玩吧！', 6000);
+        }
+    }
+    else {
+        showMessage('歡迎' + visitor + '來到《' + title + '》', 6000);
+    }
     $(".spig").animate({
         top: $(".spig").offset().top + 300,
         left: document.body.offsetWidth - 185
@@ -187,11 +213,11 @@ jQuery(document).ready(function ($) {
             if (stat_click > 4) {
                 msgs = ["你有完沒完呀？", "你已經摸我" + stat_click + "次了", "非禮呀！救命！OH，My ladygaga"];
                 var i = Math.floor(Math.random() * msgs.length);
-                showMessage(msgs[i]);
+                //showMessage(msgs[i]);
             } else {
                 msgs = ["筋鬥雲！~我飛！", "我跑呀跑呀跑！~~", "別摸我，大男人，有什麽好摸的！", "惹不起你，我還躲不起你麽？", "不要摸我了，我會告訴老婆來打你的！", "幹嘛動我呀！小心我咬你！"];
                 var i = Math.floor(Math.random() * msgs.length);
-                showMessage(msgs[i]);
+                //showMessage(msgs[i]);
             }
         s = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6,0.7,0.75,-0.1, -0.2, -0.3, -0.4, -0.5, -0.6,-0.7,-0.75];
         var i1 = Math.floor(Math.random() * s.length);
@@ -207,17 +233,6 @@ jQuery(document).ready(function ($) {
         
     });
 });
-
-
-//顯示消息函數 
-function showMessage(a, b) {
-    if (b == null) b = 10000;
-    jQuery("#message").hide().stop();
-    jQuery("#message").html(a);
-    jQuery("#message").fadeIn();
-    jQuery("#message").fadeTo("1", 1);
-    jQuery("#message").fadeOut(b);
-};
 
 //拖動
 var _move = false;
