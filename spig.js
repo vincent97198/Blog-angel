@@ -183,7 +183,7 @@ jQuery(document).ready(function ($) {
             var dy = $(document).height() - $('.spig').height();
             if(x >= 0 && x <= wx && y > 0 && y <= dy) {
 		   // showMessage("CHECK");
-                $(".spig").animate({
+                $(".spig").css({
                     top: y,
                     left: x
                 }); //控件新位置
