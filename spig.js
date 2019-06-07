@@ -55,7 +55,7 @@ jQuery(document).ready(function ($) {
         }
         
     $(".spig").animate({
-        top: $(".spig").offset().top + 300,
+        top: $(window).scrollTop() + $(".spig").offset().top +300,
         left: document.body.offsetWidth - 185
     },
     {
@@ -124,26 +124,16 @@ jQuery(document).ready(function ($) {
 //鼠標點擊時
 jQuery(document).ready(function ($) {
     var stat_click = 0;
-    
     $(".mumu").click(function () {
         if (!ismove) {
             stat_click++;
-	   if (stat_click<20){
-                msgs = [ "不要摸我了，小心我咬你！" ,"那裡不行>w<","再摸我就要報警了","你有完沒完呀？", "你已經摸我" + stat_click + "次了", "非禮呀！救命！"];
+            if (stat_click <= 20) {
+                msgs = ["你有完沒完呀？", "你已經摸我" + stat_click + "次了", "非禮呀！救命！","不要摸我了，小心我咬你！" ,"那裡不行>w<","再摸我就要報警了"];
                 var i = Math.floor(Math.random() * msgs.length);
                 showMessage(msgs[i]);
-            } else if(stat_click>=20){
-		 //while(1){
-		  //var x=Math.floor(Math.random() *3);
-		  //var y = Math.floor(Math.random() *3);
-		  //$(".spig").css({
-             	    //top: y,
-		    //left: x
-                  //});
-		//}  
-		    showMessage("test");
-	    }	    
-	}
+            } else {
+                showMessage("test");
+            }
         s = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6,0.7,0.75,-0.1, -0.2, -0.3, -0.4, -0.5, -0.6,-0.7,-0.75];
         var i1 = Math.floor(Math.random() * s.length);
         var i2 = Math.floor(Math.random() * s.length);
@@ -180,7 +170,7 @@ jQuery(document).ready(function ($) {
         _move = true;
         _x = e.pageX - parseInt($(".spig").css("left"));
         _y = e.pageY - parseInt($(".spig").css("top"));
-	//showMessage("test");
+	//showMessage("wwww");
      });
     $(document).mousemove(function (e) {
         if (_move) {
