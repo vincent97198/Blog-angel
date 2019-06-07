@@ -127,13 +127,15 @@ jQuery(document).ready(function ($) {
     $(".mumu").click(function () {
         if (!ismove) {
             stat_click++;
-            if (stat_click <= 2) {
+            if (Math.random()%2==1) {
                 msgs = ["你有完沒完呀？", "你已經摸我" + stat_click + "次了", "非禮呀！救命！","不要摸我了，小心我咬你！" ,"那裡不行>w<","再摸我就要報警了"];
                 var i = Math.floor(Math.random() * msgs.length);
                 showMessage(msgs[i]);
             } else { 
 		showMessage("不理你啦",1000);
-		$(".mumu").fadeTo("300", 0.3);
+		$(".mumu").fadeTo("300", 0);
+                duration:2000
+		$(".mumu").fadeTo("300", 1);    
             }
         s = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6,0.7,0.75,-0.1, -0.2, -0.3, -0.4, -0.5, -0.6,-0.7,-0.75];
         var i1 = Math.floor(Math.random() * s.length);
