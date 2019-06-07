@@ -176,7 +176,7 @@ jQuery(document).ready(function ($) {
      });
     $(document).mousemove(function (e) {
         if (_move) {
-	showMessage("GO");
+	showMessage($('.spig').width());
             var x = e.pageX - _x; 
             var y = e.pageY - _y;
             var wx = $(window).width() - $('.spig').width();
