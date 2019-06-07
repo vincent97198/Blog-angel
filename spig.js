@@ -1,5 +1,6 @@
 
 //右鍵菜單
+
 jQuery(document).ready(function ($) {
     $("#spig").mousedown(function (e) {
         if(e.which==3){
@@ -20,16 +21,19 @@ jQuery(document).ready(function ($) {
 
 
 //鼠標在上方時
+
 jQuery(document).ready(function ($) {
     $(".mumu").mouseover(function () {
-       $(".mumu").fadeTo("300", 0.3);
-       msgs = ["我隱身了，你看不到我", "我會隱身哦！嘿嘿！", "別動手動腳的，把手拿開！", "把手拿開我才出來！"];
+       //$(".mumu").fadeTo("300", 0.3);
+       //msgs = ["我隱身了，你看不到我", "我會隱身哦！嘿嘿！", "別動手動腳的，把手拿開！", "把手拿開我才出來！"];
        var i = Math.floor(Math.random() * msgs.length);
         showMessage(msgs[i]);
     });
+	/*
     $(".mumu").mouseout(function () {
         $(".mumu").fadeTo("300", 1)
     });
+    */
 });
 
 
@@ -168,6 +172,7 @@ jQuery(document).ready(function ($) {
         _move = true;
         _x = e.pageX - parseInt($("#spig").css("left"));
         _y = e.pageY - parseInt($("#spig").css("top"));
+	showMessage("wwww");
      });
     $(document).mousemove(function (e) {
         if (_move) {
