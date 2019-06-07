@@ -1,14 +1,14 @@
 //右键菜单
-jQuery(document).ready(function ($) {
-    $("#spig").mousedown(function (e) {
-        if(e.which==3){
-        showMessage("秘密通道:<br />    <img src=\"http://pic.sc.chinaz.com/Files/pic/Listfaces/3646/02.gif\"/><br/><a href=\"http://cnblogs.com/zwfymqz\" title=\"自为风月马前卒\">自为风月马前卒</a>  ",10000);
-}
-});
-$("#spig").bind("contextmenu", function(e) {
-    return false;
-});
-});
+//jQuery(document).ready(function ($) {
+//    $("#spig").mousedown(function (e) {
+//        if(e.which==3){
+//        showMessage("秘密通道:<br />    <img src=\"http://pic.sc.chinaz.com/Files/pic/Listfaces/3646/02.gif\"/><br/><a href=\"http://cnblogs.com/zwfymqz\" title=\"自为风月马前卒\">自为风月马前卒</a>  ",10000);
+//}
+//});
+//$("#spig").bind("contextmenu", function(e) {
+//    return false;
+//});
+//});
 
 //鼠标在消息上时
 jQuery(document).ready(function ($) {
@@ -23,7 +23,7 @@ jQuery(document).ready(function ($) {
     //$(".mumu").jrumble({rangeX: 2,rangeY: 2,rangeRot: 1});
     $(".mumu").mouseover(function () {
        $(".mumu").fadeTo("300", 0.3);
-       msgs = ["ee", "erwwre", "werw", "werwerwr"];
+       msgs = ["我隐身了，你看不到我", "我会隐身哦！嘿嘿！", "别动手动脚的，把手拿开！", "把手拿开我才出来！"];
        var i = Math.floor(Math.random() * msgs.length);
         showMessage(msgs[i]);
     });
