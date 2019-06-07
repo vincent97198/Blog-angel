@@ -48,11 +48,11 @@ jQuery(document).ready(function ($) {
     if (isindex) { //如果是主頁
         var now = (new Date()).getHours();
         if (now > 0 && now <= 6) {
-            showMessage(visitor + ' 你是夜貓子呀？還不睡覺，明天起的來麽你？', 6000);
+            showMessage(visitor + ' 你是夜貓子呀？還不睡覺，明天起的來麼你？', 6000);
         } else if (now > 6 && now <= 11) {
             showMessage(visitor + ' 早上好，早起的鳥兒有蟲吃噢！早起的蟲兒被鳥吃，你是鳥兒還是蟲兒？嘻嘻！', 6000);
         } else if (now > 11 && now <= 14) {
-            showMessage(visitor + ' 中午了，吃飯了麽？不要餓著了，餓死了誰來挺我呀！', 6000);
+            showMessage(visitor + ' 中午了，吃飯了麼？不要餓著了，餓死了誰來挺我呀！', 6000);
         } else if (now > 14 && now <= 18) {
             showMessage(visitor + ' 中午的時光真難熬！還好有你在！', 6000);
         } else {
@@ -78,7 +78,7 @@ jQuery(document).ready(function ($) {
         showMessage('萌萌地加載《<span style="color:#0099cc;">' + $(this).text() + '</span>》中，請稍候');
     });
     $('h2 a').mouseover(function () {
-        showMessage('要看看《<span style="color:#0099cc;">' + $(this).text() + '</span>》這篇隨筆麽？');
+        showMessage('要看看《<span style="color:#0099cc;">' + $(this).text() + '</span>》這篇隨筆麼？');
     });
     $('#prev-page').mouseover(function(){
         showMessage('要翻到上一頁嗎?');
@@ -93,7 +93,7 @@ jQuery(document).ready(function ($) {
         showMessage('<span style="color:#0099cc;">' + visitor + '</span> 向評論欄出發吧！');
     });
     $('#submit').mouseover(function () {
-        showMessage('確認提交了麽？');
+        showMessage('確認提交了麼？');
     });
     $('#s').focus(function () {
         showMessage('輸入你想搜索的關鍵詞再按Enter(回車)鍵就可以搜索啦!');
@@ -131,7 +131,7 @@ jQuery(document).ready(function ($) {
 });
 
 
-//無聊講點什麽
+//無聊講點什麼
 jQuery(document).ready(function ($) {
 
     window.setInterval(function () {
@@ -215,7 +215,7 @@ jQuery(document).ready(function ($) {
                 var i = Math.floor(Math.random() * msgs.length);
                 //showMessage(msgs[i]);
             } else {
-                msgs = ["筋鬥雲！~我飛！", "我跑呀跑呀跑！~~", "別摸我，大男人，有什麽好摸的！", "惹不起你，我還躲不起你麽？", "不要摸我了，我會告訴老婆來打你的！", "幹嘛動我呀！小心我咬你！"];
+                msgs = ["筋鬥雲！~我飛！", "我跑呀跑呀跑！~~", "別摸我，大男人，有什麼好摸的！", "惹不起你，我還躲不起你麼？", "不要摸我了，我會告訴老婆來打你的！", "幹嘛動我呀！小心我咬你！"];
                 var i = Math.floor(Math.random() * msgs.length);
                 //showMessage(msgs[i]);
             }
