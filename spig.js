@@ -14,7 +14,7 @@
 function showMessage(a, b) {
     if (b == null) b = 10000;
     jQuery("#message").hide().stop();
-    jQuery("#message").html(a);
+    jQuery("#message").html("a");
     jQuery("#message").fadeIn();
     jQuery("#message").fadeTo("1", 1);
     jQuery("#message").fadeOut(b);
@@ -33,7 +33,7 @@ jQuery(document).ready(function ($) {
     //$(".mumu").jrumble({rangeX: 2,rangeY: 2,rangeRot: 1});
     $(".mumu").mouseover(function () {
        $(".mumu").fadeTo("300", 0.3);
-       msgs = ["我隱身了，你看不到我", "我會隱身哦！嘿嘿！", "別動手動腳的，把手拿開！", "把手拿開我才出來！"];
+       var msgs[3] = {"我隱身了，你看不到我", "我會隱身哦！嘿嘿！", "別動手動腳的，把手拿開！", "把手拿開我才出來！"};
        var i = Math.floor(Math.random() * msgs.length);
         showMessage(msgs[i]);
     });
