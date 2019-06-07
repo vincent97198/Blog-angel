@@ -137,7 +137,7 @@ jQuery(document).ready(function ($) {
                 showMessage(msgs[i]);
             } else { 
 		showMessage("哼！不理你啦");   
-		$(".mumu").fadeOut(slow);
+		$(".mumu").fadeOut(5000);
 		lost=true;
 		delay(50000)
             }
