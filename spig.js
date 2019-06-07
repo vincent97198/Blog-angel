@@ -12,6 +12,8 @@ jQuery(document).ready(function ($) {
 	});
 });
 */
+
+var lost=false;
 //鼠標在消息上時
 jQuery(document).ready(function ($) {
     $("#message").hover(function () {
@@ -72,13 +74,16 @@ jQuery(document).ready(function ($) {
 jQuery(document).ready(function ($) {
 
     window.setInterval(function () {
-       msgs = [ "陪我聊天吧！", "好無聊哦，你都不陪我玩！", "…@……!………", "^%#&*!@*(&#)(!)(", "我可愛吧！嘻嘻!~^_^!~~","從前有座山，山上有座廟，廟裏有個老和尚給小和尚講故事，講：“從前有座……”"];
+	    if(!lost){
+		    msgs = [ "陪我聊天吧！", "好無聊哦，你都不陪我玩！", "…@……!………", "^%#&*!@*(&#)(!)(", "我可愛吧！嘻嘻!~^_^!~~","從前有座山，山上有座廟，廟裏有個老和尚給小和尚講故事，講：“從前有座……”"];
        // msgs = ["<iframe src=\"http://api.lwl12.com/hitokoto\"frameborder=\"0\" scrolling=\"no\" id=\"test\" onload=\"this.height=50\"  width=\"130px\" allowtransparency=\"true\" ></iframe>"];
         //if(weather.state)msgs.push(weather.c[0],weather.c[2]);
         //msgs = [weather.c[0],weather.c[2],"<iframe src=\"http://api.myhloli.com/hitokoto/\" frameborder=\"0\" scrolling=\"no\" id=\"external-frame\"  height=\"70px\" width=\"150px\" allowtransparency=\"true\" ></iframe>","<iframe src=\"http://api.myhloli.com/hitokoto/\" frameborder=\"0\" scrolling=\"no\" id=\"external-frame\"  height=\"70px\" width=\"150px\" allowtransparency=\"true\" ></iframe>","<iframe src=\"http://api.myhloli.com/hitokoto/\" frameborder=\"0\" scrolling=\"no\" id=\"external-frame\"  height=\"70px\" width=\"150px\" allowtransparency=\"true\" ></iframe>"];
         //msgs = [$("#hitokoto").text()];
         var i = Math.floor(Math.random() * msgs.length);
         showMessage(msgs[i], 8000);
+	    }
+       
     }, 15000);
 });
 /*
@@ -127,15 +132,15 @@ jQuery(document).ready(function ($) {
     $(".mumu").click(function () {
         if (!ismove) {
             stat_click++;
-            if (Math.random()%2==1) {
+            if (Math.random()>=20) {
                 msgs = ["你有完沒完呀？", "你已經摸我" + stat_click + "次了", "非禮呀！救命！","不要摸我了，小心我咬你！" ,"那裡不行>w<","再摸我就要報警了"];
                 var i = Math.floor(Math.random() * msgs.length);
                 showMessage(msgs[i]);
             } else { 
 		showMessage("不理你啦",1000);
 		$(".mumu").fadeTo("300", 0);
+		    
 		   delay(5000)
-		$(".mumu").fadeTo("300", 1);
             }
         s = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6,0.7,0.75,-0.1, -0.2, -0.3, -0.4, -0.5, -0.6,-0.7,-0.75];
         var i1 = Math.floor(Math.random() * s.length);
