@@ -182,7 +182,7 @@ jQuery(document).ready(function ($) {
             var wx = $(window).width() - $('.spig').width();
             var dy = $(document).height() - $('.spig').height();
             if(x >= 0 && x <= wx && y > 0 && y <= dy) {
-		    showMessage("CHECK");
+		   // showMessage("CHECK");
                 $(".spig").animate({
                     top: y,
                     left: x
