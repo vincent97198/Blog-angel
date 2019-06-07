@@ -131,7 +131,7 @@ jQuery(document).ready(function ($) {
     $(".mumu").click(function () {
         if (!ismove) {
             stat_click++;
-            if (Math.random()<=2) {
+            if (stat_click<=25) {
                 msgs = ["你有完沒完呀？", "你已經摸我" + stat_click + "次了", "非禮呀！救命！","不要摸我了，小心我咬你！" ,"那裡不行>w<","再摸我就要報警了"];
                 var i = Math.floor(Math.random() * msgs.length);
                 showMessage(msgs[i]);
