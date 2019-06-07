@@ -42,17 +42,16 @@ jQuery(document).ready(function ($) {
 	var url = window.location.href;
 	var title = document.title;
         var now = (new Date()).getHours();
-        if (now > 0 && now <= 6) {
+        if (now > 1 && now <= 4) {
             showMessage(visitor + ' 你是夜貓子呀？還不睡覺，明天起的來麽你？', 6000);
-        } else if (now > 6 && now <= 11) {
+        } else if (now > 4 && now <= 7) {
             showMessage(visitor + ' 早上好，早起的鳥兒有蟲吃噢！早起的蟲兒被鳥吃，你是鳥兒還是蟲兒？嘻嘻！', 6000);
-        } else if (now > 11 && now <= 14) {
+        } else if (now > 11 && now <= 13) {
             showMessage(visitor + ' 中午了，吃飯了麽？不要餓著了，餓死了誰來挺我呀！', 6000);
-        } else if (now > 14 && now <= 20) {
-            showMessage(visitor + ' 中午的時光真難熬', 6000);
+        } else if (now > 14 && now <= 17) {
+            showMessage(visitor + ' 下午的時光真難熬', 6000);
         } else {
 		showMessage('歡迎' + visitor + '來到《' + title + '》', 6000);
-            showMessage(visitor + ' 快來逗我玩吧！', 6000);
         }
         
     $(".spig").animate({
@@ -175,14 +174,14 @@ jQuery(document).ready(function ($) {
         _y = e.pageY - parseInt($("#spig").css("top"));
 	//showMessage("wwww");
      });
-    $(document).mousemove(function (e) {
+    $(".spig").mousemove(function (e) {
         if (_move) {
             var x = e.pageX - _x; 
             var y = e.pageY - _y;
             var wx = $(window).width() - $('#spig').width();
             var dy = $(document).height() - $('#spig').height();
             if(x >= 0 && x <= wx && y > 0 && y <= dy) {
-                $(".spig").css({
+                $(".spig").animate({
                     top: y,
                     left: x
                 }); //控件新位置
