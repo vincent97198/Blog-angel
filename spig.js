@@ -132,13 +132,8 @@ jQuery(document).ready(function ($) {
                 var i = Math.floor(Math.random() * msgs.length);
                 showMessage(msgs[i]);
             } else { 
-		showMessage("FFFFF");
-		    /*
-		$(".spig").animate({
-        	    top: 100,
-       		    left: 100
-    	        }
-		*/
+		showMessage("不理你啦",1000);
+		$(".mumu").fadeTo("0", 1);
             }
         s = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6,0.7,0.75,-0.1, -0.2, -0.3, -0.4, -0.5, -0.6,-0.7,-0.75];
         var i1 = Math.floor(Math.random() * s.length);
