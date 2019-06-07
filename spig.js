@@ -33,7 +33,7 @@ jQuery(document).ready(function ($) {
     //$(".mumu").jrumble({rangeX: 2,rangeY: 2,rangeRot: 1});
     $(".mumu").mouseover(function () {
        $(".mumu").fadeTo("300", 0.3);
-       var msgs[3] = {"我隱身了，你看不到我", "我會隱身哦！嘿嘿！", "別動手動腳的，把手拿開！", "把手拿開我才出來！"};
+       var msgs[3] = {"tst", "etest"};
        var i = Math.floor(Math.random() * msgs.length);
         showMessage(msgs[i]);
     });
