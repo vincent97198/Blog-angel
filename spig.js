@@ -14,7 +14,7 @@ jQuery(document).ready(function ($) {
 */
 
 var lost=false;
-//鼠標在消息上時
+//滑鼠在消息上時
 jQuery(document).ready(function ($) {
     $("#message").hover(function () {
        $("#message").fadeTo("100", 1);
@@ -22,7 +22,7 @@ jQuery(document).ready(function ($) {
 });
 
 
-//鼠標在上方時
+//滑鼠在上方時
 
 jQuery(document).ready(function ($) {
     $(".mumu").mouseover(function () {
@@ -45,11 +45,11 @@ jQuery(document).ready(function ($) {
 	var title = document.title;
         var now = (new Date()).getHours();
         if (now > 1 && now <= 4) {
-            showMessage(visitor + ' 你是夜貓子呀？還不睡覺，明天起的來麽你？', 6000);
+            showMessage(visitor + ' 你是夜貓子呀？還不睡覺，明天起的來麼？', 6000);
         } else if (now > 4 && now <= 7) {
             showMessage(visitor + ' 早上好，早起的鳥兒有蟲吃噢！早起的蟲兒被鳥吃，你是鳥兒還是蟲兒？嘻嘻！', 6000);
         } else if (now > 11 && now <= 13) {
-            showMessage(visitor + ' 中午了，吃飯了麽？不要餓著了，餓死了誰來挺我呀！', 6000);
+            showMessage(visitor + ' 中午了，吃飯了麽？！', 6000);
         } else if (now > 14 && now <= 17) {
             showMessage(visitor + ' 下午的時光真難熬', 6000);
         } else {
@@ -125,7 +125,7 @@ jQuery(document).ready(function ($) {
     });
 });
 
-//鼠標點擊時
+//點擊時
 jQuery(document).ready(function ($) {
     var stat_click = 0;
     $(".mumu").click(function () {
